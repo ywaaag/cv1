@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "any": "cpp"
+    },
+    "cmake.sourceDirectory": "/home/ywag/ros_ws/src/ballistic_solver"
+}

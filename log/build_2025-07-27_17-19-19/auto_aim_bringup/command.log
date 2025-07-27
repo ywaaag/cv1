@@ -1,0 +1,2 @@
+Invoking command in '/home/ywag/ros_ws/build/auto_aim_bringup': /usr/bin/cmake /home/ywag/ros_ws/src/auto_aim_bringup -DCMAKE_INSTALL_PREFIX=/home/ywag/ros_ws/install/auto_aim_bringup
+Invoked command in '/home/ywag/ros_ws/build/auto_aim_bringup' returned '1': /usr/bin/cmake /home/ywag/ros_ws/src/auto_aim_bringup -DCMAKE_INSTALL_PREFIX=/home/ywag/ros_ws/install/auto_aim_bringup

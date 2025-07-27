@@ -1,0 +1,86 @@
+[0.027s] Invoking command in '/home/ywag/ros_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ywag/ros_ws/src/rm_auto_aim/armor_tracker -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ywag/ros_ws/install/armor_tracker
+[0.156s] -- The C compiler identification is GNU 11.4.0
+[0.245s] -- The CXX compiler identification is GNU 11.4.0
+[0.266s] -- Detecting C compiler ABI info
+[0.363s] -- Detecting C compiler ABI info - done
+[0.373s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.373s] -- Detecting C compile features
+[0.374s] -- Detecting C compile features - done
+[0.384s] -- Detecting CXX compiler ABI info
+[0.490s] -- Detecting CXX compiler ABI info - done
+[0.505s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.505s] -- Detecting CXX compile features
+[0.505s] -- Detecting CXX compile features - done
+[0.509s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.715s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.814s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.055s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.057s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.075s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.097s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.118s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.178s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.182s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.297s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.322s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.365s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.391s] -- Looking for pthread.h
+[1.512s] -- Looking for pthread.h - found
+[1.512s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.638s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.638s] -- Found Threads: TRUE  
+[1.867s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.872s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.872s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.941s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.972s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/armor_tracker` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[1.987s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.987s] -- Configured cppcheck include dirs: /home/ywag/ros_ws/src/rm_auto_aim/armor_tracker/include
+[1.987s] -- Configured cppcheck exclude dirs and/or files: 
+[1.987s] -- Added test 'lint_cmake' to check CMake code style
+[1.987s] -- Added test 'xmllint' to check XML markup files
+[1.987s] -- Added test 'clang_format' to check C / C++ code style
+[1.994s] -- Configuring done
+[2.005s] -- Generating done
+[2.008s] -- Build files have been written to: /home/ywag/ros_ws/build/armor_tracker
+[2.016s] Invoked command in '/home/ywag/ros_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ywag/ros_ws/src/rm_auto_aim/armor_tracker -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ywag/ros_ws/install/armor_tracker
+[2.024s] Invoking command in '/home/ywag/ros_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/armor_tracker -- -j2 -l2
+[2.083s] [ 16%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/extended_kalman_filter.cpp.o[0m
+[9.456s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker.cpp.o[0m
+[14.481s] [ 50%] [32mBuilding CXX object CMakeFiles/armor_tracker.dir/src/tracker_node.cpp.o[0m
+[29.815s] [ 66%] [32m[1mLinking CXX shared library libarmor_tracker.so[0m
+[30.956s] [ 66%] Built target armor_tracker
+[30.987s] [ 83%] [32mBuilding CXX object CMakeFiles/armor_tracker_node.dir/rclcpp_components/node_main_armor_tracker_node.cpp.o[0m
+[34.506s] [100%] [32m[1mLinking CXX executable armor_tracker_node[0m
+[34.661s] [100%] Built target armor_tracker_node
+[34.685s] Invoked command in '/home/ywag/ros_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/armor_tracker -- -j2 -l2
+[34.685s] Invoking command in '/home/ywag/ros_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/armor_tracker
+[34.691s] -- Install configuration: ""
+[34.695s] -- Execute custom install script
+[34.702s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/lib/armor_tracker/armor_tracker_node
+[34.704s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/include/armor_tracker/extended_kalman_filter.hpp
+[34.713s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/include/armor_tracker/tracker.hpp
+[34.721s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/include/armor_tracker/tracker_node.hpp
+[34.731s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/environment/library_path.sh
+[34.738s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/environment/library_path.dsv
+[34.749s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/lib/libarmor_tracker.so
+[34.768s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/ament_index/resource_index/package_run_dependencies/armor_tracker
+[34.789s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/ament_index/resource_index/parent_prefix_path/armor_tracker
+[34.803s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.sh
+[34.822s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/environment/ament_prefix_path.dsv
+[34.833s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/environment/path.sh
+[34.855s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/environment/path.dsv
+[34.867s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/local_setup.bash
+[34.880s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/local_setup.sh
+[34.888s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/local_setup.zsh
+[34.898s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/local_setup.dsv
+[34.911s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.dsv
+[34.923s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/ament_index/resource_index/packages/armor_tracker
+[34.933s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/ament_index/resource_index/rclcpp_components/armor_tracker
+[34.946s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_dependencies-extras.cmake
+[34.967s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_include_directories-extras.cmake
+[34.967s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/cmake/ament_cmake_export_libraries-extras.cmake
+[34.977s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig.cmake
+[34.982s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/cmake/armor_trackerConfig-version.cmake
+[34.991s] -- Symlinking: /home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.xml
+[35.004s] Invoked command in '/home/ywag/ros_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/armor_tracker

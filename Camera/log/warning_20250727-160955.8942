@@ -1,0 +1,4 @@
+Log file created at: 2025/07/27 16:09:55
+Running on machine: ywag-virtual-machine
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0727 16:09:55.931316  8967 MVCameraBase.cpp:98] Device:(name:MV-SUA202GC#0 sn:041181220011)Lost

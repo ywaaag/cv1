@@ -1,0 +1,7 @@
+/mv_camera:
+  ros__parameters:
+    camera_name: mv_camera
+    #camera_sn: "MindVision SUA202GC"  # 替换为实际能识别的相机序列号
+
+    exposure_time: 80000
+    analog_gain: 32

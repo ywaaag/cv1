@@ -1,0 +1,4 @@
+source;share/ballistic_solver/local_setup.bash
+source;share/ballistic_solver/local_setup.dsv
+source;share/ballistic_solver/local_setup.sh
+source;share/ballistic_solver/local_setup.zsh

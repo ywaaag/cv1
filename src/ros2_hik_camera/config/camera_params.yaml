@@ -1,0 +1,6 @@
+/hik_camera:
+  ros__parameters:
+    camera_name: narrow_stereo
+
+    exposure_time: 6000    //曝光时间，单位微秒 
+    gain: 32.0             //增益

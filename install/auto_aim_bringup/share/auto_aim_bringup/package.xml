@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>auto_aim_bringup</name>
+  <version>0.0.1</version>
+  <description>Bringup launch for auto aim system</description>
+  <maintainer email="you@your.email">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>ros2_hik_camera</exec_depend>
+  <exec_depend>ros2-mindvision-camera</exec_depend>
+  <exec_depend>armor_detector</exec_depend>
+  <exec_depend>ballistic_solver</exec_depend>
+</package>

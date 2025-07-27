@@ -1,0 +1,795 @@
+[0.071s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.071s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x722f538482b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x722f5381bcd0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x722f5381bcd0>>)
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.146s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ywag/ros_ws'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(Camera) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/Data) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(Camera/log) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/ballistic_solver) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ballistic_solver' with type 'ros.ament_cmake' and name 'ballistic_solver'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ros'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['cmake', 'python']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'cmake'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['python_setup_py']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_detector' with type 'ros.ament_cmake' and name 'armor_detector'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_tracker' with type 'ros.ament_cmake' and name 'armor_tracker'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/auto_aim_interfaces' with type 'ros.ament_cmake' and name 'auto_aim_interfaces'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'ros'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['cmake', 'python']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'cmake'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'python'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['python_setup_py']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'python_setup_py'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ros'
+[0.164s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_gimbal_description' with type 'ros.ament_cmake' and name 'rm_gimbal_description'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'ros'
+[0.165s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_serial_driver' with type 'ros.ament_cmake' and name 'rm_serial_driver'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['colcon_meta']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'ros'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['cmake', 'python']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'cmake'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'python'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['python_setup_py']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'python_setup_py'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'ros'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['cmake', 'python']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'cmake'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'python'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['python_setup_py']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'python_setup_py'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_vision/rm_vision_bringup' with type 'ros.ament_cmake' and name 'rm_vision_bringup'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-mindvision-camera) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2-mindvision-camera' with type 'ros.ament_cmake' and name 'mindvision_camera'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'ros'
+[0.168s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.186s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/ywag/ros_ws/install
+[0.187s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 290 installed packages in /opt/ros/humble
+[0.188s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.206s] DEBUG:colcon.colcon_core.verb:Building package 'auto_aim_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/auto_aim_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/auto_aim_interfaces', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/rm_auto_aim/auto_aim_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.206s] DEBUG:colcon.colcon_core.verb:Building package 'hik_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/hik_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/hik_camera', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/ros2_hik_camera', 'symlink_install': True, 'test_result_base': None}
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_target' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'mindvision_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/mindvision_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/mindvision_camera', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/ros2-mindvision-camera', 'symlink_install': True, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'rm_gimbal_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/rm_gimbal_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/rm_gimbal_description', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/rm_gimbal_description', 'symlink_install': True, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'armor_detector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/armor_detector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/armor_detector', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/rm_auto_aim/armor_detector', 'symlink_install': True, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'armor_tracker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/armor_tracker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/armor_tracker', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/rm_auto_aim/armor_tracker', 'symlink_install': True, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ballistic_solver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'ballistic_solver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/ballistic_solver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/ballistic_solver', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/ballistic_solver', 'symlink_install': True, 'test_result_base': None}
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.208s] DEBUG:colcon.colcon_core.verb:Building package 'rm_serial_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/rm_serial_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/rm_serial_driver', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/rm_serial_driver', 'symlink_install': True, 'test_result_base': None}
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_target' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.208s] DEBUG:colcon.colcon_core.verb:Building package 'rm_vision_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ywag/ros_ws/build/rm_vision_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ywag/ros_ws/install/rm_vision_bringup', 'merge_install': False, 'path': '/home/ywag/ros_ws/src/rm_vision/rm_vision_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.208s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.209s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.209s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/rm_auto_aim/auto_aim_interfaces' with build type 'ament_cmake'
+[0.210s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/rm_auto_aim/auto_aim_interfaces'
+[0.211s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.213s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/ros2_hik_camera' with build type 'ament_cmake'
+[0.213s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/ros2_hik_camera'
+[0.213s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.213s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.220s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/auto_aim_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/auto_aim_interfaces -- -j2 -l2
+[0.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/hik_camera -- -j2 -l2
+[0.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/hik_camera -- -j2 -l2
+[0.323s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/hik_camera
+[0.353s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[0.354s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/hik_camera
+[0.360s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera' for CMake module files
+[0.360s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera' for CMake config files
+[0.361s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[0.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[0.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[0.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[0.368s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/lib'
+[0.368s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[0.371s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[0.372s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[0.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[0.373s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/bin'
+[0.373s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[0.374s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/lib/python3.10/site-packages'
+[0.374s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/bin'
+[0.374s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.ps1'
+[0.376s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.dsv'
+[0.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.sh'
+[0.383s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.bash'
+[0.383s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.zsh'
+[0.384s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[0.385s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[0.385s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera' for CMake module files
+[0.387s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera' for CMake config files
+[0.387s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[0.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[0.388s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[0.388s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[0.390s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/lib'
+[0.390s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[0.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[0.392s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[0.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[0.396s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/bin'
+[0.396s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/lib/python3.10/site-packages'
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/hik_camera/bin'
+[0.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.ps1'
+[0.398s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.dsv'
+[0.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.sh'
+[0.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.bash'
+[0.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/hik_camera/share/hik_camera/package.zsh'
+[0.403s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[0.404s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/ros2-mindvision-camera' with build type 'ament_cmake'
+[0.404s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/ros2-mindvision-camera'
+[0.404s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.404s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/mindvision_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/mindvision_camera -- -j2 -l2
+[0.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/mindvision_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/mindvision_camera -- -j2 -l2
+[0.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/mindvision_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/mindvision_camera
+[0.569s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mindvision_camera)
+[0.570s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera' for CMake module files
+[0.570s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera' for CMake config files
+[0.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'cmake_prefix_path')
+[0.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.ps1'
+[0.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.dsv'
+[0.575s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/mindvision_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/mindvision_camera
+[0.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.sh'
+[0.583s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/lib'
+[0.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'ld_library_path_lib')
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.ps1'
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.dsv'
+[0.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.sh'
+[0.586s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/bin'
+[0.586s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/lib/pkgconfig/mindvision_camera.pc'
+[0.586s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/lib/python3.10/site-packages'
+[0.586s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/bin'
+[0.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.ps1'
+[0.587s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.dsv'
+[0.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.sh'
+[0.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.bash'
+[0.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.zsh'
+[0.591s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/mindvision_camera/share/colcon-core/packages/mindvision_camera)
+[0.592s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mindvision_camera)
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera' for CMake module files
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera' for CMake config files
+[0.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'cmake_prefix_path')
+[0.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.ps1'
+[0.595s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.dsv'
+[0.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.sh'
+[0.597s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/lib'
+[0.597s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'ld_library_path_lib')
+[0.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.ps1'
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.dsv'
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.sh'
+[0.599s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/bin'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/lib/pkgconfig/mindvision_camera.pc'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/lib/python3.10/site-packages'
+[0.602s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/mindvision_camera/bin'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.ps1'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.dsv'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.sh'
+[0.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.bash'
+[0.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/mindvision_camera/share/mindvision_camera/package.zsh'
+[0.615s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/mindvision_camera/share/colcon-core/packages/mindvision_camera)
+[0.616s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/rm_gimbal_description' with build type 'ament_cmake'
+[0.616s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/rm_gimbal_description'
+[0.619s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.620s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.639s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/rm_gimbal_description -- -j2 -l2
+[0.692s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/rm_gimbal_description -- -j2 -l2
+[0.692s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/rm_gimbal_description
+[0.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_gimbal_description)
+[0.736s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description' for CMake module files
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description' for CMake config files
+[0.738s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_gimbal_description', 'cmake_prefix_path')
+[0.738s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.ps1'
+[0.739s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.dsv'
+[0.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/rm_gimbal_description
+[0.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.sh'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/bin'
+[0.743s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/lib/pkgconfig/rm_gimbal_description.pc'
+[0.743s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/lib/python3.10/site-packages'
+[0.743s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/bin'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.ps1'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv'
+[0.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.sh'
+[0.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.bash'
+[0.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.zsh'
+[0.747s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/rm_gimbal_description/share/colcon-core/packages/rm_gimbal_description)
+[0.748s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_gimbal_description)
+[0.748s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description' for CMake module files
+[0.748s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description' for CMake config files
+[0.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_gimbal_description', 'cmake_prefix_path')
+[0.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.ps1'
+[0.750s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.dsv'
+[0.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.sh'
+[0.751s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/bin'
+[0.751s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/lib/pkgconfig/rm_gimbal_description.pc'
+[0.751s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/lib/python3.10/site-packages'
+[0.751s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_gimbal_description/bin'
+[0.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.ps1'
+[0.752s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv'
+[0.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.sh'
+[0.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.bash'
+[0.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.zsh'
+[0.754s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/rm_gimbal_description/share/colcon-core/packages/rm_gimbal_description)
+[0.826s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/auto_aim_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ywag/ros_ws/build/auto_aim_interfaces -- -j2 -l2
+[0.829s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/auto_aim_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/auto_aim_interfaces
+[0.914s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim_interfaces)
+[0.915s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/auto_aim_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ywag/ros_ws/build/auto_aim_interfaces
+[0.915s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces' for CMake module files
+[0.916s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces' for CMake config files
+[0.916s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'cmake_prefix_path')
+[0.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.ps1'
+[0.918s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.dsv'
+[0.919s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.sh'
+[0.919s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/lib'
+[0.919s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'ld_library_path_lib')
+[0.919s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.ps1'
+[0.922s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.dsv'
+[0.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.sh'
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/bin'
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/lib/pkgconfig/auto_aim_interfaces.pc'
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/lib/python3.10/site-packages'
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/bin'
+[0.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.ps1'
+[0.924s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.dsv'
+[0.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.sh'
+[0.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.bash'
+[0.927s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.zsh'
+[0.927s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/auto_aim_interfaces/share/colcon-core/packages/auto_aim_interfaces)
+[0.928s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim_interfaces)
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces' for CMake module files
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces' for CMake config files
+[0.929s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'cmake_prefix_path')
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.ps1'
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.dsv'
+[0.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.sh'
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/lib'
+[0.932s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'ld_library_path_lib')
+[0.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.ps1'
+[0.932s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.dsv'
+[0.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.sh'
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/bin'
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/lib/pkgconfig/auto_aim_interfaces.pc'
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/lib/python3.10/site-packages'
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/auto_aim_interfaces/bin'
+[0.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.ps1'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.dsv'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.sh'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.bash'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.zsh'
+[0.937s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/auto_aim_interfaces/share/colcon-core/packages/auto_aim_interfaces)
+[0.938s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/rm_serial_driver' with build type 'ament_cmake'
+[0.940s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/rm_serial_driver'
+[0.940s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.940s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.943s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/rm_auto_aim/armor_detector' with build type 'ament_cmake'
+[0.943s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/rm_auto_aim/armor_detector'
+[0.943s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.943s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/rm_serial_driver -- -j2 -l2
+[0.956s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/armor_detector -- -j2 -l2
+[1.107s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/rm_serial_driver -- -j2 -l2
+[1.107s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/rm_serial_driver
+[1.143s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[1.145s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver' for CMake module files
+[1.145s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver' for CMake config files
+[1.145s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[1.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[1.146s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[1.148s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/rm_serial_driver
+[1.150s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/lib'
+[1.150s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[1.151s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[1.151s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[1.151s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[1.151s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/bin'
+[1.151s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[1.152s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/lib/python3.10/site-packages'
+[1.165s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/bin'
+[1.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[1.168s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[1.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[1.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[1.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[1.169s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[1.169s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[1.169s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver' for CMake module files
+[1.170s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver' for CMake config files
+[1.171s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[1.171s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[1.171s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[1.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[1.173s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/lib'
+[1.173s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[1.173s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[1.173s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[1.175s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[1.175s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/bin'
+[1.175s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[1.175s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/lib/python3.10/site-packages'
+[1.175s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_serial_driver/bin'
+[1.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[1.177s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[1.177s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[1.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[1.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[1.182s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[1.183s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/rm_auto_aim/armor_tracker' with build type 'ament_cmake'
+[1.183s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/rm_auto_aim/armor_tracker'
+[1.183s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.183s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.196s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/armor_detector -- -j2 -l2
+[1.198s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/armor_detector': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/armor_detector
+[1.205s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/armor_tracker -- -j2 -l2
+[1.252s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detector)
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector' for CMake module files
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector' for CMake config files
+[1.253s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'cmake_prefix_path')
+[1.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.ps1'
+[1.253s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/armor_detector
+[1.255s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.dsv'
+[1.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.sh'
+[1.257s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/lib'
+[1.257s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'ld_library_path_lib')
+[1.257s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.ps1'
+[1.257s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.dsv'
+[1.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.sh'
+[1.260s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/bin'
+[1.260s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/lib/pkgconfig/armor_detector.pc'
+[1.260s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/lib/python3.10/site-packages'
+[1.260s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/bin'
+[1.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.ps1'
+[1.260s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.dsv'
+[1.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.sh'
+[1.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.bash'
+[1.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.zsh'
+[1.263s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/armor_detector/share/colcon-core/packages/armor_detector)
+[1.264s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detector)
+[1.264s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector' for CMake module files
+[1.265s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector' for CMake config files
+[1.265s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'cmake_prefix_path')
+[1.265s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.ps1'
+[1.266s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.dsv'
+[1.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.sh'
+[1.267s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/lib'
+[1.267s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'ld_library_path_lib')
+[1.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.ps1'
+[1.268s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.dsv'
+[1.268s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.sh'
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/bin'
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/lib/pkgconfig/armor_detector.pc'
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/lib/python3.10/site-packages'
+[1.270s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_detector/bin'
+[1.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.ps1'
+[1.273s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.dsv'
+[1.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.sh'
+[1.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.bash'
+[1.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_detector/share/armor_detector/package.zsh'
+[1.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/armor_detector/share/colcon-core/packages/armor_detector)
+[1.283s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/ballistic_solver' with build type 'ament_cmake'
+[1.283s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/ballistic_solver'
+[1.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.283s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/ballistic_solver': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/ballistic_solver -- -j2 -l2
+[1.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/armor_tracker -- -j2 -l2
+[1.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/armor_tracker': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/armor_tracker
+[1.379s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[1.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/armor_tracker' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/armor_tracker
+[1.380s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker' for CMake module files
+[1.383s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker' for CMake config files
+[1.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[1.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[1.391s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/lib'
+[1.391s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[1.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[1.392s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[1.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[1.393s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/bin'
+[1.394s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[1.397s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/lib/python3.10/site-packages'
+[1.399s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/bin'
+[1.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.ps1'
+[1.400s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.dsv'
+[1.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.sh'
+[1.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.bash'
+[1.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.zsh'
+[1.406s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[1.407s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[1.407s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker' for CMake module files
+[1.407s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker' for CMake config files
+[1.407s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[1.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[1.410s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[1.410s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[1.415s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/lib'
+[1.415s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[1.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[1.416s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[1.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[1.416s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/bin'
+[1.416s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[1.416s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/lib/python3.10/site-packages'
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/armor_tracker/bin'
+[1.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.ps1'
+[1.421s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.dsv'
+[1.421s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.sh'
+[1.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.bash'
+[1.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/armor_tracker/share/armor_tracker/package.zsh'
+[1.424s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[1.425s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ywag/ros_ws/src/rm_vision/rm_vision_bringup' with build type 'ament_cmake'
+[1.425s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ywag/ros_ws/src/rm_vision/rm_vision_bringup'
+[1.425s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.425s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/ballistic_solver' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/ballistic_solver -- -j2 -l2
+[1.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/ballistic_solver': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/ballistic_solver
+[1.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/rm_vision_bringup': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/rm_vision_bringup -- -j2 -l2
+[1.469s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ballistic_solver)
+[1.469s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver' for CMake module files
+[1.470s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver' for CMake config files
+[1.470s] Level 1:colcon.colcon_core.shell:create_environment_hook('ballistic_solver', 'cmake_prefix_path')
+[1.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/hook/cmake_prefix_path.ps1'
+[1.470s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/hook/cmake_prefix_path.dsv'
+[1.472s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/ballistic_solver' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/ballistic_solver
+[1.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/hook/cmake_prefix_path.sh'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/lib'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/bin'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/lib/pkgconfig/ballistic_solver.pc'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/lib/python3.10/site-packages'
+[1.474s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/bin'
+[1.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.ps1'
+[1.474s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.dsv'
+[1.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.sh'
+[1.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.bash'
+[1.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.zsh'
+[1.478s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/ballistic_solver/share/colcon-core/packages/ballistic_solver)
+[1.478s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ballistic_solver)
+[1.478s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver' for CMake module files
+[1.478s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver' for CMake config files
+[1.478s] Level 1:colcon.colcon_core.shell:create_environment_hook('ballistic_solver', 'cmake_prefix_path')
+[1.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/hook/cmake_prefix_path.ps1'
+[1.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/hook/cmake_prefix_path.dsv'
+[1.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/hook/cmake_prefix_path.sh'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/lib'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/bin'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/lib/pkgconfig/ballistic_solver.pc'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/lib/python3.10/site-packages'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/ballistic_solver/bin'
+[1.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.ps1'
+[1.481s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.dsv'
+[1.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.sh'
+[1.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.bash'
+[1.485s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/ballistic_solver/share/ballistic_solver/package.zsh'
+[1.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/ballistic_solver/share/colcon-core/packages/ballistic_solver)
+[1.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/rm_vision_bringup' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ywag/ros_ws/build/rm_vision_bringup -- -j2 -l2
+[1.489s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ywag/ros_ws/build/rm_vision_bringup': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/rm_vision_bringup
+[1.507s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_vision_bringup)
+[1.507s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup' for CMake module files
+[1.508s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup' for CMake config files
+[1.508s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_vision_bringup', 'cmake_prefix_path')
+[1.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ywag/ros_ws/build/rm_vision_bringup' returned '0': CMAKE_PREFIX_PATH=/home/ywag/ros_ws/install/rm_serial_driver:/home/ywag/ros_ws/install/auto_aim_interfaces:/home/ywag/ros_ws/install/rm_vision_bringup:/home/ywag/ros_ws/install/rm_gimbal_description:/home/ywag/ros_ws/install/mindvision_camera:/home/ywag/ros_ws/install/hik_camera:/home/ywag/ros_ws/install/ballistic_solver:/home/ywag/ros_ws/install/armor_tracker:/home/ywag/ros_ws/install/armor_detector:/opt/ros/humble LD_LIBRARY_PATH=/home/ywag/ros_ws/install/rm_serial_driver/lib:/home/ywag/ros_ws/install/auto_aim_interfaces/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/usr/local/lib:/home/ywag/ros_ws/install/mindvision_camera/lib:/home/ywag/ros_ws/install/hik_camera/lib:/home/ywag/ros_ws/install/armor_tracker/lib:/home/ywag/ros_ws/install/armor_detector/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ywag/ros_ws/build/rm_vision_bringup
+[1.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.ps1'
+[1.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.dsv'
+[1.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.sh'
+[1.510s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/bin'
+[1.510s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/lib/pkgconfig/rm_vision_bringup.pc'
+[1.510s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/lib/python3.10/site-packages'
+[1.510s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/bin'
+[1.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.ps1'
+[1.511s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.dsv'
+[1.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.sh'
+[1.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.bash'
+[1.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.zsh'
+[1.512s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/rm_vision_bringup/share/colcon-core/packages/rm_vision_bringup)
+[1.513s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_vision_bringup)
+[1.513s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup' for CMake module files
+[1.513s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup' for CMake config files
+[1.513s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_vision_bringup', 'cmake_prefix_path')
+[1.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.ps1'
+[1.514s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.dsv'
+[1.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.sh'
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/bin'
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/lib/pkgconfig/rm_vision_bringup.pc'
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/lib/python3.10/site-packages'
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/ywag/ros_ws/install/rm_vision_bringup/bin'
+[1.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.ps1'
+[1.516s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.dsv'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.sh'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.bash'
+[1.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/ywag/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.zsh'
+[1.518s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ywag/ros_ws/install/rm_vision_bringup/share/colcon-core/packages/rm_vision_bringup)
+[1.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.520s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.521s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.525s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.527s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.527s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.596s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.596s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywag/ros_ws/install/local_setup.ps1'
+[1.596s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ywag/ros_ws/install/_local_setup_util_ps1.py'
+[1.598s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywag/ros_ws/install/setup.ps1'
+[1.598s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywag/ros_ws/install/local_setup.sh'
+[1.600s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ywag/ros_ws/install/_local_setup_util_sh.py'
+[1.600s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywag/ros_ws/install/setup.sh'
+[1.601s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywag/ros_ws/install/local_setup.bash'
+[1.602s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywag/ros_ws/install/setup.bash'
+[1.603s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ywag/ros_ws/install/local_setup.zsh'
+[1.604s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ywag/ros_ws/install/setup.zsh'

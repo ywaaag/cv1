@@ -1,0 +1,16 @@
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/launch/bringup.launch.py
+/home/ywag/ros_ws/install/auto_aim_bringup/share/ament_index/resource_index/package_run_dependencies/auto_aim_bringup
+/home/ywag/ros_ws/install/auto_aim_bringup/share/ament_index/resource_index/parent_prefix_path/auto_aim_bringup
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/environment/ament_prefix_path.sh
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/environment/ament_prefix_path.dsv
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/environment/path.sh
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/environment/path.dsv
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/local_setup.bash
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/local_setup.sh
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/local_setup.zsh
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/local_setup.dsv
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/package.dsv
+/home/ywag/ros_ws/install/auto_aim_bringup/share/ament_index/resource_index/packages/auto_aim_bringup
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/cmake/auto_aim_bringupConfig.cmake
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/cmake/auto_aim_bringupConfig-version.cmake
+/home/ywag/ros_ws/install/auto_aim_bringup/share/auto_aim_bringup/package.xml

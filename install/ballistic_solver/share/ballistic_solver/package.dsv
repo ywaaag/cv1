@@ -1,0 +1,8 @@
+source;share/ballistic_solver/hook/cmake_prefix_path.ps1
+source;share/ballistic_solver/hook/cmake_prefix_path.dsv
+source;share/ballistic_solver/hook/cmake_prefix_path.sh
+source;share/ballistic_solver/local_setup.bash
+source;share/ballistic_solver/local_setup.dsv
+source;share/ballistic_solver/local_setup.ps1
+source;share/ballistic_solver/local_setup.sh
+source;share/ballistic_solver/local_setup.zsh

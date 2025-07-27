@@ -1,0 +1,1 @@
+/home/ywag/ros_ws/src/ros2-mindvision-camera/launch/mv_launch.py
