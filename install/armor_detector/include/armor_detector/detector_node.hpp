@@ -1,1 +1,0 @@
-/home/ywag/ros_ws/src/rm_auto_aim/armor_detector/include/armor_detector/detector_node.hpp

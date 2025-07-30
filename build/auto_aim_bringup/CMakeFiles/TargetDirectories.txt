@@ -1,9 +1,0 @@
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/uninstall.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/auto_aim_bringup_uninstall.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/test.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/edit_cache.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/rebuild_cache.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/list_install_components.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/install.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/install/local.dir
-/home/ywag/ros_ws/build/auto_aim_bringup/CMakeFiles/install/strip.dir

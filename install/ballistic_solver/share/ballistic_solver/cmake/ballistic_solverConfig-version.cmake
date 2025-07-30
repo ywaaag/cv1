@@ -1,1 +1,0 @@
-/home/ywag/ros_ws/build/ballistic_solver/ament_cmake_core/ballistic_solverConfig-version.cmake

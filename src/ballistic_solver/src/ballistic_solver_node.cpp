@@ -1,98 +1,256 @@
-#include "rclcpp/rclcpp.hpp"
 #include "auto_aim_interfaces/msg/armors.hpp"
 #include "auto_aim_interfaces/msg/fire_command.hpp"
 #include "ballistic_solver/SolveTrajectory.hpp"
+#include "rclcpp/rclcpp.hpp"
+#include <algorithm>
+#include <cmath>
 
-using std::placeholders::_1;
+using auto_aim_interfaces::msg::Armors;
+using auto_aim_interfaces::msg::FireCommand;
 
 class BallisticSolverNode : public rclcpp::Node {
 public:
-  BallisticSolverNode()
-  : Node("ballistic_solver") {
-    // 参数声明与读取
-    this->declare_parameter<double>("initial_speed", 25.0);
-    st.current_v = this->get_parameter("initial_speed").as_double();
+  BallisticSolverNode() : Node("ballistic_solver") {
+    // 声明参数
+    declareParameters();
+    loadParameters();
 
-    // 初始化模型参数
-    st.k = 0.092f;
-    st.bullet_type = BULLET_17;
-    st.current_yaw = 0.0f;
-    st.current_pitch = 0.0f;
-    st.vxw = st.vyw = st.vzw = st.v_yaw = 0.0f;
-    st.tar_yaw = 0.0f;
-    st.r1 = st.r2 = 0.5f; st.dz = 0.1f;
-    st.bias_time = 100;
-    st.s_bias = 0.19133f;
-    st.z_bias = 0.21265f;
-    st.armor_id = ARMOR_INFANTRY3;
-    st.armor_num = ARMOR_NUM_NORMAL;
+    // 订阅与发布
+    subscription_ = this->create_subscription<Armors>(
+        "/detector/armors", rclcpp::SensorDataQoS().keep_last(10),
+        std::bind(&BallisticSolverNode::armorCallback, this,
+                  std::placeholders::_1));
 
-    // 订阅装甲板位姿
-    subscription_ = this->create_subscription<auto_aim_interfaces::msg::Armors>(
-      "/detector/armors", rclcpp::SensorDataQoS().keep_last(10),
-      std::bind(&BallisticSolverNode::armorCallback, this, _1)
-    );
+    publisher_ =
+        this->create_publisher<FireCommand>("/solver/target_angle", 10);
 
-    // 发布增量指令
-    publisher_ = this->create_publisher<auto_aim_interfaces::msg::FireCommand>(
-      "/solver/fire_command", 10
-    );
+    // 计算最大有效射程
+    float k1_value = (drag_coefficient_ > 0)
+                         ? static_cast<float>(drag_coefficient_)
+                         : calculateDragCoefficient();
+    max_range_ =
+        calculateMaxRange(static_cast<float>(initial_speed_), k1_value);
 
-    RCLCPP_INFO(this->get_logger(), "BallisticSolverNode started");
+    RCLCPP_INFO(this->get_logger(),
+                "BallisticSolverNode started with initial_speed=%.1f m/s, "
+                "max_range=%.1f m",
+                initial_speed_, max_range_);
   }
 
 private:
-  void armorCallback(const auto_aim_interfaces::msg::Armors::SharedPtr msg) {
+  void declareParameters() {
+    // 基本参数
+    this->declare_parameter<double>("initial_speed", 25.0);
+    this->declare_parameter<double>("drag_coefficient", 0.038); // 0表示自动计算
+
+    // 目标预测参数
+    this->declare_parameter<int>("bias_time_ms", 100);
+    this->declare_parameter<bool>("enable_motion_prediction", false);
+
+    // 补偿参数
+    this->declare_parameter<double>("s_bias", 0.19133);
+    this->declare_parameter<double>("z_bias", 0.0265);
+
+    // 安全参数
+    this->declare_parameter<double>("max_target_distance", 8.0);
+    this->declare_parameter<double>("min_target_distance", 0.05);
+    this->declare_parameter<double>("max_pitch_angle_deg", 45.0);
+
+    // 调试参数
+    this->declare_parameter<bool>("enable_debug_output", true);
+    this->declare_parameter<int>("armor_selection_strategy",
+                                 0); // 0=最近, 1=最大
+  }
+
+  void loadParameters() {
+    initial_speed_ = this->get_parameter("initial_speed").as_double();
+    drag_coefficient_ = this->get_parameter("drag_coefficient").as_double();
+    bias_time_ms_ = this->get_parameter("bias_time_ms").as_int();
+    enable_motion_prediction_ =
+        this->get_parameter("enable_motion_prediction").as_bool();
+    s_bias_ = this->get_parameter("s_bias").as_double();
+    z_bias_ = this->get_parameter("z_bias").as_double();
+    max_target_distance_ =
+        this->get_parameter("max_target_distance").as_double();
+    min_target_distance_ =
+        this->get_parameter("min_target_distance").as_double();
+    max_pitch_angle_deg_ =
+        this->get_parameter("max_pitch_angle_deg").as_double();
+    enable_debug_output_ = this->get_parameter("enable_debug_output").as_bool();
+    armor_selection_strategy_ =
+        this->get_parameter("armor_selection_strategy").as_int();
+  }
+
+  // 装甲板选择逻辑
+  const auto &
+  selectBestArmor(const std::vector<auto_aim_interfaces::msg::Armor> &armors) {
+    if (armors.size() == 1) {
+      return armors[0];
+    }
+
+    auto distanceSquared = [](const auto &armor) {
+      return armor.pose.position.x * armor.pose.position.x +
+             armor.pose.position.y * armor.pose.position.y +
+             armor.pose.position.z * armor.pose.position.z;
+    };
+
+    if (armor_selection_strategy_ == 1) {
+      // 选择最远的装甲板
+      return *std::max_element(armors.begin(), armors.end(),
+                               [&](const auto &a, const auto &b) {
+                                 return distanceSquared(a) < distanceSquared(b);
+                               });
+    } else {
+      // 默认选择最近的装甲板
+      return *std::min_element(armors.begin(), armors.end(),
+                               [&](const auto &a, const auto &b) {
+                                 return distanceSquared(a) < distanceSquared(b);
+                               });
+    }
+  }
+
+  // 目标有效性验证
+  bool isTargetValid(float x, float y, float z, float pitch_deg) {
+    float distance = std::sqrt(x * x + y * y + z * z);
+    return true;
+
+    // 距离检查
+    if (distance < min_target_distance_ || distance > max_target_distance_) {
+      if (enable_debug_output_) {
+        RCLCPP_WARN(this->get_logger(),
+                    "Target distance %.2fm out of range [%.2f, %.2f]", distance,
+                    min_target_distance_, max_target_distance_);
+      }
+      return false;
+    }
+
+    // 俯仰角检查
+    if (std::abs(pitch_deg) > max_pitch_angle_deg_) {
+      if (enable_debug_output_) {
+        RCLCPP_WARN(this->get_logger(),
+                    "Target pitch angle %.2f° exceeds limit %.2f°", pitch_deg,
+                    max_pitch_angle_deg_);
+      }
+      return false;
+    }
+
+    // 射程检查
+    float horizontal_distance = std::sqrt(x * x + y * y);
+    if (horizontal_distance > max_range_) {
+      if (enable_debug_output_) {
+        RCLCPP_WARN(this->get_logger(),
+                    "Target beyond max range: %.2fm > %.2fm",
+                    horizontal_distance, max_range_);
+      }
+      return false;
+    }
+
+    return true;
+  }
+
+  void armorCallback(const Armors::SharedPtr msg) {
     if (msg->armors.empty()) {
-      RCLCPP_WARN(this->get_logger(), "No armors detected.");
+      if (enable_debug_output_) {
+        RCLCPP_DEBUG(this->get_logger(), "No armors detected");
+      }
       return;
     }
 
-    // 提取目标位姿
-    const auto &armor = msg->armors[0];
-    st.xw = armor.pose.position.x;
-    st.yw = armor.pose.position.y;
-    st.zw = armor.pose.position.z;
+    // 选择最佳装甲板
+    const auto &armor = selectBestArmor(msg->armors);
 
-    // 同步模型参数
-    setSolveTrajectoryParams(st);
+    // 坐标系变换 (相机坐标系 -> 机器人坐标系)
+    float x_robot = armor.pose.position.z;
+    float y_robot = -armor.pose.position.x;
+    float z_robot = -armor.pose.position.y;
 
-    // 计算绝对角度（弧度）
-    float yaw_abs = 0.0f, pitch_abs = 0.0f, aim_x, aim_y, aim_z;
-    autoSolveTrajectory(&pitch_abs, &yaw_abs, &aim_x, &aim_y, &aim_z);
+    // 填充参数结构体
+    SolveTrajectoryParams params;
 
-    // 计算相对于当前的增量（弧度）
-    float delta_yaw_rad   = yaw_abs   - current_yaw_;
-    float delta_pitch_rad = pitch_abs - current_pitch_;
+    // 阻力系数：使用参数值或自动计算
+    params.k = (drag_coefficient_ > 0) ? static_cast<float>(drag_coefficient_)
+                                       : calculateDragCoefficient();
+    params.current_v = static_cast<float>(initial_speed_);
 
-    // 更新当前姿态绝对值（弧度）
-    current_yaw_   = yaw_abs;
-    current_pitch_ = pitch_abs;
+    // 目标位置
+    params.xw = x_robot;
+    params.yw = y_robot;
+    params.zw = z_robot;
+
+    // 目标速度（暂时假设静止）
+    params.vxw = 0.0f;
+    params.vyw = 0.0f;
+    params.vzw = 0.0f;
+
+    // 补偿参数
+    params.bias_time = bias_time_ms_;
+    params.s_bias = static_cast<float>(s_bias_);
+    params.z_bias = static_cast<float>(z_bias_);
+
+    // 调用弹道解算
+    float pitch_rad = 0.0f, yaw_rad = 0.0f, time_of_flight = 0.0f;
+    solveForStaticTarget(params, &pitch_rad, &yaw_rad, &time_of_flight);
 
     // 转换为角度
-    constexpr float RAD2DEG = 180.0f / PI;
-    float delta_yaw_deg   = delta_yaw_rad   * RAD2DEG;
-    float delta_pitch_deg = delta_pitch_rad * RAD2DEG;
+    static constexpr float RAD2DEG = 180.0f / PI;
+    float target_yaw_deg = yaw_rad * RAD2DEG;
+    float target_pitch_deg = pitch_rad * RAD2DEG;
 
-    // 发布增量角度（度）
-    auto cmd = auto_aim_interfaces::msg::FireCommand();
+    // 验证解算结果
+    if (!isBallisticSolutionValid(pitch_rad, yaw_rad, time_of_flight) ||
+        !isTargetValid(x_robot, y_robot, z_robot, target_pitch_deg)) {
+      if (enable_debug_output_) {
+        RCLCPP_WARN(this->get_logger(),
+                    "Invalid ballistic solution, skipping...");
+      }
+      return;
+    }
+
+    // 发布结果
+    auto cmd = FireCommand();
     cmd.header.stamp = this->now();
-    cmd.yaw   = delta_yaw_deg;
-    cmd.pitch = delta_pitch_deg;
+    cmd.header.frame_id = "gimbal_base_link";
+    cmd.yaw = target_yaw_deg;
+    cmd.pitch = target_pitch_deg;
+
     publisher_->publish(cmd);
 
-    RCLCPP_INFO(this->get_logger(), "Published delta_yaw=%.2f°, delta_pitch=%.2f°", delta_yaw_deg, delta_pitch_deg);
+    // 调试输出
+    if (enable_debug_output_) {
+      float distance =
+          std::sqrt(x_robot * x_robot + y_robot * y_robot + z_robot * z_robot);
+      float horizontal_dist = std::sqrt(x_robot * x_robot + y_robot * y_robot);
+      RCLCPP_INFO(this->get_logger(),
+                  "Target[%zu armors]: Pos(%.2f,%.2f,%.2f) HDist=%.2fm "
+                  "VDist=%.2fm -> k=%.6f Angle(Y=%.2f°,P=%.2f°) ToF=%.3fs",
+                  msg->armors.size(), x_robot, y_robot, z_robot,
+                  horizontal_dist, distance, params.k, target_yaw_deg,
+                  target_pitch_deg, time_of_flight);
+    }
   }
 
-  rclcpp::Subscription<auto_aim_interfaces::msg::Armors>::SharedPtr subscription_;
-  rclcpp::Publisher<auto_aim_interfaces::msg::FireCommand>::SharedPtr publisher_;
+  // 成员变量
+  rclcpp::Subscription<Armors>::SharedPtr subscription_;
+  rclcpp::Publisher<FireCommand>::SharedPtr publisher_;
 
-  SolveTrajectoryParams st;
-  float current_yaw_{0.0f};   // 弧度
-  float current_pitch_{0.0f}; // 弧度
+  // 参数
+  double initial_speed_;
+  double drag_coefficient_;
+  int bias_time_ms_;
+  bool enable_motion_prediction_;
+  double s_bias_;
+  double z_bias_;
+  double max_target_distance_;
+  double min_target_distance_;
+  double max_pitch_angle_deg_;
+  bool enable_debug_output_;
+  int armor_selection_strategy_;
+
+  // 计算值
+  float max_range_;
 };
 
-int main(int argc, char * argv[]) {
+int main(int argc, char *argv[]) {
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<BallisticSolverNode>());
   rclcpp::shutdown();

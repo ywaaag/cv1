@@ -3,9 +3,7 @@ import sys
 from ament_index_python.packages import get_package_share_directory
 sys.path.append(os.path.join(get_package_share_directory('rm_vision_bringup'), 'launch'))
 
-
 def generate_launch_description():
-
     from common import node_params, launch_params, robot_state_publisher, tracker_node
     from launch_ros.descriptions import ComposableNode
     from launch_ros.actions import ComposableNodeContainer, Node
@@ -44,38 +42,42 @@ def generate_launch_description():
             on_exit=Shutdown(),
         )
 
-    hik_camera_node = get_camera_node('hik_camera', 'hik_camera::HikCameraNode')
-    mv_camera_node = get_camera_node('mindvision_camera', 'mindvision_camera::MVCameraNode')
-    if (launch_params['camera'] == 'mv'):
-        cam_detector = get_camera_detector_container(mv_camera_node)
-    elif (launch_params['camera'] == 'hik'):
-        cam_detector = get_camera_detector_container(hik_camera_node)
-    
-    serial_driver_node = Node(
-        package='rm_serial_driver',
-        executable='rm_serial_driver_node',
-        name='serial_driver',
-        output='both',
+    # 弹道解算节点
+    ballistic_solver_node = Node(
+        package='ballistic_solver',
+        executable='ballistic_solver_node',
+        name='ballistic_solver',
+        output='screen',
         emulate_tty=True,
         parameters=[node_params],
-        on_exit=Shutdown(),
         ros_arguments=['--ros-args', '--log-level',
-                       'serial_driver:='+launch_params['serial_log_level']],
+                      'ballistic_solver:='+launch_params.get('ballistic_log_level', 'info')],
     )
 
-    delay_serial_node = TimerAction(
-        period=1.5,
-        actions=[serial_driver_node],
-    )
+    # 相机节点选择
+    hik_camera_node = get_camera_node('hik_camera', 'hik_camera::HikCameraNode')
+    mv_camera_node = get_camera_node('mindvision_camera', 'mindvision_camera::MVCameraNode')
+    
+    if launch_params['camera'] == 'mv':
+        cam_detector = get_camera_detector_container(mv_camera_node)
+    elif launch_params['camera'] == 'hik':
+        cam_detector = get_camera_detector_container(hik_camera_node)
 
+    # 跟踪器节点延迟启动
     delay_tracker_node = TimerAction(
         period=2.0,
         actions=[tracker_node],
     )
 
+    # 弹道解算节点延迟启动（确保检测节点先启动）
+    delay_ballistic_node = TimerAction(
+        period=1.5,
+        actions=[ballistic_solver_node],
+    )
+
     return LaunchDescription([
         robot_state_publisher,
         cam_detector,
-        delay_serial_node,
         delay_tracker_node,
+        delay_ballistic_node,
     ])

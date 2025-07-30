@@ -1,1 +1,0 @@
-/home/ywag/ros_ws/src/rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
