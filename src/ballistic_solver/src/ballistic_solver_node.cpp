@@ -11,6 +11,7 @@ using auto_aim_interfaces::msg::FireCommand;
 class BallisticSolverNode : public rclcpp::Node {
 public:
   BallisticSolverNode() : Node("ballistic_solver") {
+
     // 声明参数
     declareParameters();
     loadParameters();
@@ -41,7 +42,7 @@ private:
   void declareParameters() {
     // 基本参数
     this->declare_parameter<double>("initial_speed", 25.0);
-    this->declare_parameter<double>("drag_coefficient", 0.038); // 0表示自动计算
+    this->declare_parameter<double>("drag_coefficient", 0.0); // 0表示自动计算
 
     // 目标预测参数
     this->declare_parameter<int>("bias_time_ms", 100);
@@ -49,7 +50,7 @@ private:
 
     // 补偿参数
     this->declare_parameter<double>("s_bias", 0.19133);
-    this->declare_parameter<double>("z_bias", 0.0265);
+    this->declare_parameter<double>("z_bias", 0.21265);
 
     // 安全参数
     this->declare_parameter<double>("max_target_distance", 8.0);
@@ -111,8 +112,8 @@ private:
 
   // 目标有效性验证
   bool isTargetValid(float x, float y, float z, float pitch_deg) {
-    float distance = std::sqrt(x * x + y * y + z * z);
     return true;
+    float distance = std::sqrt(x * x + y * y + z * z);
 
     // 距离检查
     if (distance < min_target_distance_ || distance > max_target_distance_) {
@@ -163,6 +164,15 @@ private:
     float x_robot = armor.pose.position.z;
     float y_robot = -armor.pose.position.x;
     float z_robot = -armor.pose.position.y;
+
+    // 详细的坐标调试输出
+    if (enable_debug_output_) {
+      RCLCPP_DEBUG(this->get_logger(),
+                   "Coordinate transform: Camera(%.3f,%.3f,%.3f) -> "
+                   "Robot(%.3f,%.3f,%.3f)",
+                   armor.pose.position.x, armor.pose.position.y,
+                   armor.pose.position.z, x_robot, y_robot, z_robot);
+    }
 
     // 填充参数结构体
     SolveTrajectoryParams params;
@@ -220,12 +230,19 @@ private:
       float distance =
           std::sqrt(x_robot * x_robot + y_robot * y_robot + z_robot * z_robot);
       float horizontal_dist = std::sqrt(x_robot * x_robot + y_robot * y_robot);
+      float compensated_z = z_robot + params.z_bias;
+
       RCLCPP_INFO(this->get_logger(),
-                  "Target[%zu armors]: Pos(%.2f,%.2f,%.2f) HDist=%.2fm "
-                  "VDist=%.2fm -> k=%.6f Angle(Y=%.2f°,P=%.2f°) ToF=%.3fs",
-                  msg->armors.size(), x_robot, y_robot, z_robot,
-                  horizontal_dist, distance, params.k, target_yaw_deg,
-                  target_pitch_deg, time_of_flight);
+                  "Target: Pos(%.2f,%.2f,%.2f) HDist=%.2fm Z_comp=%.3fm -> "
+                  "k=%.6f Angle(Y=%.2f°,P=%.2f°) ToF=%.3fs",
+                  x_robot, y_robot, z_robot, horizontal_dist, compensated_z,
+                  params.k, target_yaw_deg, target_pitch_deg, time_of_flight);
+
+      // 理论检查：无阻力情况下的抛物线角度
+      float simple_angle = std::atan2(z_robot, horizontal_dist) * 180.0f / PI;
+      RCLCPP_DEBUG(this->get_logger(),
+                   "Simple geometric angle: %.2f° (without ballistics)",
+                   simple_angle);
     }
   }
 

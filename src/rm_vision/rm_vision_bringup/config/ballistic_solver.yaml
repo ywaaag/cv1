@@ -1,0 +1,24 @@
+ballistic_solver:
+  ros__parameters:
+    # === 基本弹道参数 ===
+    initial_speed: 25.0              # 弹丸初始速度 (m/s)
+    drag_coefficient: 0.038          # 空气阻力系数 
+    
+    # === 目标预测参数 ===
+    bias_time_ms: 100                # 预测时间偏移 (毫秒)
+    enable_motion_prediction: false  # 运动预测（暂未实现）
+    
+    # === 补偿参数 ===
+    s_bias: 0.19133                  # 水平距离补偿 (m)
+    z_bias: 0.0                      # 垂直高度补偿 (m) - 先设为0测试
+    
+    # === 安全边界参数 ===
+    max_target_distance: 8.0         # 最大目标距离 (m)
+    min_target_distance: 0.01         # 最小目标距离 (m)
+    max_pitch_angle_deg: 45.0        # 最大俯仰角限制 (度)
+    
+    # === 目标选择策略 ===
+    armor_selection_strategy: 0      # 0=最近距离, 1=最大距离
+    
+    # === 调试参数 ===
+    enable_debug_output: true        # 详细调试信息

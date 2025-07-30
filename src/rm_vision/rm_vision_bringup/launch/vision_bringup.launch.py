@@ -42,6 +42,18 @@ def generate_launch_description():
             on_exit=Shutdown(),
         )
 
+    # 弹道解算配置文件路径
+    ballistic_config_path = os.path.join(
+        get_package_share_directory('rm_vision_bringup'), 
+        'config', 
+        'ballistic_solver.yaml'
+    )
+    
+    # 弹道解算节点参数合并
+    ballistic_params = [node_params]  # 使用通用参数
+    if os.path.exists(ballistic_config_path):
+        ballistic_params.append(ballistic_config_path)  # 添加专用配置
+    
     # 弹道解算节点
     ballistic_solver_node = Node(
         package='ballistic_solver',
@@ -49,9 +61,11 @@ def generate_launch_description():
         name='ballistic_solver',
         output='screen',
         emulate_tty=True,
-        parameters=[node_params],
+        parameters=ballistic_params,
         ros_arguments=['--ros-args', '--log-level',
                       'ballistic_solver:='+launch_params.get('ballistic_log_level', 'info')],
+        respawn=True,           # 自动重启
+        respawn_delay=2.0,      # 重启延迟
     )
 
     # 相机节点选择
@@ -64,20 +78,20 @@ def generate_launch_description():
         cam_detector = get_camera_detector_container(hik_camera_node)
 
     # 跟踪器节点延迟启动
-    delay_tracker_node = TimerAction(
-        period=2.0,
-        actions=[tracker_node],
-    )
+    # delay_tracker_node = TimerAction(
+    #     period=2.0,
+    #     actions=[tracker_node],
+    # )
 
     # 弹道解算节点延迟启动（确保检测节点先启动）
     delay_ballistic_node = TimerAction(
-        period=1.5,
+        period=1.5,  # 在tracker之前启动
         actions=[ballistic_solver_node],
     )
 
     return LaunchDescription([
         robot_state_publisher,
         cam_detector,
-        delay_tracker_node,
-        delay_ballistic_node,
+        delay_ballistic_node,    # 弹道解算先启动
+        # delay_tracker_node,      # 跟踪器后启动
     ])
